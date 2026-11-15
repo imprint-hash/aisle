@@ -153,9 +153,31 @@ body > .progress { position: fixed; z-index: 40; top: 0; left: 0; right: 0; heig
 .steps > li, .how > div, .grid4 .stat, .box { transition: transform .25s ease, border-color .25s ease; }
 .steps > li:hover, .how > div:hover, .grid4 .stat:hover { transform: translateY(-3px); border-color: rgba(218,160,56,.45); }
 
+/* ---------- impact, business model, brand campaign form ---------- */
+.why { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 22px 0 8px; }
+.wcard { background: linear-gradient(160deg, #1a1c1a, #121315); border: 1px solid var(--line); border-radius: 12px; padding: 20px; transition: transform .25s ease, border-color .25s ease; }
+.wcard:hover { transform: translateY(-3px); border-color: rgba(218,160,56,.45); }
+.wcard p { margin: 0; font-size: .94rem; color: #d9d6cc; }
+.who { display: inline-block; font: 600 .66rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--amber); margin-bottom: 10px; }
+.model { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin: 12px 0 14px; }
+.mrow { background: #131416; padding: 16px 18px; }
+.mrow b { display: block; font: 700 1.25rem var(--display); color: var(--amber); letter-spacing: -.02em; margin-bottom: 4px; }
+.mrow:first-child b { color: var(--cream); }
+.mrow span { font-size: .88rem; color: var(--muted); }
+.campform { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 22px 0; padding: 20px; background: linear-gradient(160deg, #1a1c1a, #121315); border: 1px solid var(--line); border-radius: 12px; }
+.campform label { display: grid; gap: 6px; font-weight: 600; font-size: .88rem; }
+.campform .wide { grid-column: 1 / -1; }
+.campform input, .campform textarea { min-height: 48px; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--line); background: #0f1113; color: var(--ink); font: 500 .95rem var(--body); width: 100%; resize: vertical; }
+.campform input:focus, .campform textarea:focus, select:focus { border-color: var(--amber); outline: none; box-shadow: 0 0 0 3px rgba(218,160,56,.2); }
+.crow { display: flex; gap: 12px; flex-wrap: wrap; }
+.campform .btn[type=submit] { background: var(--serv-btn); border-color: var(--serv-btn); } .campform .btn[type=submit]:hover { background: #4e67ec; }
+.plan { border: 1px solid rgba(159,191,59,.35); border-radius: 12px; padding: 18px 20px; background: rgba(28,36,16,.35); }
+.plan.bad-plan { border-color: rgba(240,138,93,.45); background: rgba(43,24,16,.45); }
+.planhead { font-weight: 600; } .plan p { margin: 0 0 10px; } .plan p:last-child { margin: 0; }
+
 @media (max-width: 860px) {
   .stats { grid-template-columns: 1fr 1fr; } .stat:nth-child(2) { border-right: 0; } .stat:nth-child(-n+2) { border-bottom: 1px solid rgba(254,248,240,.12); }
-  .earn, .verdict { grid-template-columns: 1fr; } .grid4 { grid-template-columns: 1fr 1fr; } .how { grid-template-columns: 1fr; }
+  .earn, .verdict, .why, .campform { grid-template-columns: 1fr; } .model { grid-template-columns: 1fr 1fr; } .grid4 { grid-template-columns: 1fr 1fr; } .how { grid-template-columns: 1fr; }
   .top nav { display: none; } .mob-hide { display: none; } .mark3d { right: 4%; top: 22%; width: 150px; opacity: .55; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; }

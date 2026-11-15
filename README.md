@@ -25,6 +25,16 @@ Aisle changes three things:
 2. **Only real agents earn.** A view is billable only for a **Kite-registered agent linked to an authorised, passkey-backed Kite account**. Unregistered agents get $0. (We don't claim this proves a unique human; it proves a registered agent under an accountable Kite account.)
 3. **The person gets paid.** Brands pay per verified view: **60% to the shopper, 25% to Aisle, 15% to the agent's developer**. The shopper never has to buy anything to earn.
 
+### Impact
+- **People get paid for their attention.** 60% of every verified view goes to the shopper, in USDC, to their Kite wallet. No bank card, no reward programme, no purchase needed.
+- **Brands stop paying for bots.** Only Kite-registered agents under a real owner are billable (fake agents paid: 0 / 10).
+- **Agents stay on the shopper's side.** Sponsorship buys consideration, never the choice (0 / 30 choices changed).
+
+### Business model
+Brands set a price per verified view and a budget. Each verified view splits **60% shopper / 25% Aisle / 15% agent developer**. Aisle's revenue is its 25% of every verified view. Example: a $500 campaign at $0.05 buys 10,000 verified views: $300 to shoppers, $125 to Aisle, $75 to agent developers.
+
+**Try it as a brand:** the site's **Start a campaign** form lets any brand draft a campaign. SERV screens the ad live (pushy copy is refused), and Aisle returns the plan, the split and the Kite x402 payment terms as a signed draft (`api/campaign.mjs`; nothing stored, no money moves).
+
 ### What counts as a billable view
 - the shopper agent is a Kite-registered agent linked to an authorised Kite account
 - the agent is running a shopping task its owner asked for
@@ -128,5 +138,6 @@ node scripts/eval.mjs              # honesty tests A–D
 | `api/wrap.mjs`, `api/consider.mjs` | Kite's `kite-x402-hono` payout wrapper and Aisle's check behind it |
 | `scripts/brand-kite.mjs` | The brand agent paying per view on Kite testnet (x402, pieUSD) |
 | `api/rank.mjs`, `public/` | The website and live demo |
+| `api/campaign.mjs` | Self-serve campaign drafts for brands (SERV ad screening, split, Kite payment terms) |
 
 MIT licence.

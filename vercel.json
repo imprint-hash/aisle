@@ -12,6 +12,10 @@
   },
   "api/wrap.mjs": {
    "maxDuration": 60
+  },
+  "api/campaign.mjs": {
+   "maxDuration": 60,
+   "includeFiles": "{data,lib}/**"
   }
  },
  "headers": [

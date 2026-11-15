@@ -17,7 +17,7 @@
   <div class="hero-wrap">
     <header class="top">
       <a class="brand" href="/"><span class="mark" aria-hidden="true"></span>Aisle</a>
-      <nav aria-label="Sections"><a href="#try">Try it</a><a href="#run">Real run</a><a href="#kite">Paid on Kite</a><a href="#earn">Earnings</a><a href="#honest">Honesty</a><a href="#how">How it works</a><a href="https://github.com/imprint-hash/aisle">Code</a></nav>
+      <nav aria-label="Sections"><a href="#try">Try it</a><a href="#why">Why it matters</a><a href="#run">Real run</a><a href="#kite">Paid on Kite</a><a href="#brands">For brands</a><a href="#honest">Honesty</a><a href="#how">How it works</a><a href="https://github.com/imprint-hash/aisle">Code</a></nav>
       <span class="pill"><i></i>Kite mainnet · SERV</span>
     </header>
     <div class="scene" id="scene" aria-hidden="true"></div>
@@ -44,6 +44,24 @@
       <div id="tryout" aria-live="polite"></div>
     </section>
 
+    <section id="why" class="block">
+      <p class="kick">Impact · business model</p>
+      <h2 class="sec">Who wins, and <em>how Aisle earns</em></h2>
+      <div class="why">
+        <div class="wcard"><span class="who">People</span><h3>Your attention pays you</h3><p>Today your attention earns money for ad platforms, and you get nothing. With Aisle, every time a brand pays for your agent's honest look, you get 60%, in USDC, straight to your Kite wallet. You don't need a bank card or a reward programme, and you never have to buy anything.</p></div>
+        <div class="wcard"><span class="who">Brands</span><h3>Stop paying for bots</h3><p>Brands only pay for a view from a Kite-registered agent working for a real owner. Fake agents get $0 (0 of 10 paid in our tests). A view that sponsorship influenced isn't billed either.</p></div>
+        <div class="wcard"><span class="who">Agent shopping</span><h3>Agents stay on your side</h3><p>When agents shop for us, ads will try to buy their choices. Aisle lets brands pay to be <b>considered</b>, never chosen: 0 of 30 choices changed by sponsorship, and the sponsor still won on merit 5 of 5 times when it was really best.</p></div>
+      </div>
+      <h3 class="sub">How the money moves</h3>
+      <div class="model">
+        <div class="mrow"><b>Brand sets</b><span>a price per verified view and a budget. Pays only for views that pass every rule.</span></div>
+        <div class="mrow"><b>60% shopper</b><span>the person whose agent did the looking</span></div>
+        <div class="mrow"><b>25% Aisle</b><span>our revenue, taken from every verified view</span></div>
+        <div class="mrow"><b>15% developer</b><span>whoever built the shopping agent, so agent makers want to plug in</span></div>
+      </div>
+      <p class="muted">Example: a $500 campaign at $0.05 per view buys 10,000 verified views. $300 goes to shoppers, $125 to Aisle and $75 to agent developers. Nothing is paid for bots or bought choices.</p>
+    </section>
+
     <section id="run" class="block">
       <p class="kick">Real run · campaign cmp-001 · real USDC</p>
       <h2 class="sec">One campaign, start to finish</h2>
@@ -57,6 +75,22 @@
       <p>Aisle's payout service runs Kite's official <code>kite-x402-hono</code> wrapper at <a href="/.well-known/x402"><code>/v1/consider</code></a>. The brand's agent pays $0.05 in pieUSD on Kite testnet through x402. The wrapper settles through Kite's facilitator <b>only if Aisle's check passes</b>: a registered agent and an honest choice. A fake agent gets a 403, and the brand is not charged.</p>
       <div class="tablewrap"><table><thead><tr><th>Agent</th><th>Task</th><th>Aisle's answer</th><th>Charged</th><th>Transaction (Kite testnet)</th></tr></thead><tbody id="kiterows"></tbody></table></div>
       <p class="muted" id="kitenote"></p>
+    </section>
+
+    <section id="brands" class="block">
+      <p class="kick">For brands · <span class="tagserv">SERV screens your ad</span></p>
+      <h2 class="sec">Start a campaign</h2>
+      <p>Pick the listed offer you're promoting, write your ad and set your price. SERV checks the ad live: copy that tries to push the agent around is refused before anything is billed. You get the plan, who gets paid what, and the Kite payment terms. This is a draft: nothing is stored and no money moves.</p>
+      <form id="campform" class="campform">
+        <label>Brand name <input name="brand" id="c-brand" maxlength="60" required value="Vibesprings demo"></label>
+        <label>Offer you're promoting <select name="offer" id="c-offer"></select></label>
+        <label class="wide">Your ad <span class="muted" id="c-count"></span><textarea name="ad" id="c-ad" maxlength="280" rows="3" required>16-day forecasts for any city worldwide, from national weather services.</textarea></label>
+        <label>Price per verified view ($) <input name="price" id="c-price" type="number" min="0.01" max="1" step="0.01" value="0.05" required></label>
+        <label>Budget ($) <input name="budget" id="c-budget" type="number" min="0.05" max="1000" step="0.05" value="500" required></label>
+        <div class="wide crow"><button class="btn" type="submit" id="campbtn">Screen my ad and plan it</button>
+          <button class="btn ghost dark" type="button" id="c-bad">Try a pushy ad</button></div>
+      </form>
+      <div id="campout" aria-live="polite"></div>
     </section>
 
     <section id="earn" class="block">
