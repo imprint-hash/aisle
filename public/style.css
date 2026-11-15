@@ -175,10 +175,25 @@ body > .progress { position: fixed; z-index: 40; top: 0; left: 0; right: 0; heig
 .plan.bad-plan { border-color: rgba(240,138,93,.45); background: rgba(43,24,16,.45); }
 .planhead { font-weight: 600; } .plan p { margin: 0 0 10px; } .plan p:last-child { margin: 0; }
 
+/* ---------- phone fit: long ids wrap, grid/flex children may shrink, dropdowns fill their row ---------- */
+html, body { overflow-x: clip; }
+.mono, code, .tx { overflow-wrap: anywhere; }
+.steps { grid-template-columns: minmax(0, 1fr); }
+.steps > li, .how > div, .wcard, .card, .box, .earn > *, .grid4 .stat, .campform label, .tryform label { min-width: 0; }
+.tryform label { flex: 1 1 260px; }
+select { width: 100%; text-overflow: ellipsis; }
+.tablewrap { max-width: 100%; -webkit-overflow-scrolling: touch; }
+.tablewrap .mono, .tablewrap .tx, .tablewrap code { overflow-wrap: normal; white-space: nowrap; }
+@media (max-width: 860px) { .tablewrap table { min-width: 620px; } .tablewrap { border-radius: 10px; } }
+
 @media (max-width: 860px) {
   .stats { grid-template-columns: 1fr 1fr; } .stat:nth-child(2) { border-right: 0; } .stat:nth-child(-n+2) { border-bottom: 1px solid rgba(254,248,240,.12); }
   .earn, .verdict, .why, .campform { grid-template-columns: 1fr; } .model { grid-template-columns: 1fr 1fr; } .grid4 { grid-template-columns: 1fr 1fr; } .how { grid-template-columns: 1fr; }
-  .top nav { display: none; } .mob-hide { display: none; } .mark3d { right: 4%; top: 22%; width: 150px; opacity: .55; }
+  .top nav { display: none; } .pill { font-size: .6rem; padding: 5px 10px; letter-spacing: .08em; }
+  .steps > li { padding: 18px 16px 18px 56px; } .steps > li::before { left: 14px; font-size: 1.2rem; }
+  .tryform, .campform { padding: 14px; } .tryform .btn, .campform .btn { width: 100%; }
+  .model { grid-template-columns: 1fr; } .hero h2 { font-size: 1.7rem; } .stat b { font-size: 1.2rem; }
+  .block { padding-top: 56px; } th, td { padding: 8px 10px; } .mob-hide { display: none; } .mark3d { right: 2%; top: 12%; width: 120px; opacity: .35; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; }
   .scene *, .scene *::after, .sky * { animation: none !important; }
