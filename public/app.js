@@ -77,6 +77,18 @@ if (run) {
     ${v.map((x) => `<tr><td>${esc(seller(camp?.sponsored_offer))} <span class="chip spon">sponsored</span></td><td>${esc(x.location)}</td><td>+${money(x.split_usd?.shopper || 0)}</td></tr>`).join("")}</tbody></table></div>`;
 }
 
+// ---- per-view payouts on Kite's chain (kite-x402-hono) ----
+const kv = await get("/data/kite-views.json");
+if (kv) {
+  const kscan = (tx) => `<a class="tx" href="https://testnet.kitescan.ai/tx/${esc(tx)}" target="_blank" rel="noopener noreferrer">${esc(tx.slice(0, 10))}…${esc(tx.slice(-6))}</a>`;
+  const loc = (t) => camp?.tasks.find((x) => x.id === t)?.location || t;
+  $("kiterows").innerHTML = kv.results.map((r) => `<tr><td class="mono">${esc(r.agent.slice(0, 14))}…</td><td>${esc(loc(r.task))}</td>
+    <td><span class="chip ${r.status === 200 ? "ok" : "bad"}">${esc(r.receipt?.type?.replace(/_/g, " ") || r.status)}</span></td>
+    <td>${r.charged ? "$0.05 pieUSD" : "$0, not charged"}</td><td>${r.tx ? kscan(r.tx) : "–"}</td></tr>`).join("");
+  const paid = kv.results.filter((r) => r.charged).length;
+  $("kitenote").innerHTML = `${paid} paid views settled straight to the shopper's wallet <span class="mono">${esc(kv.results[0]?.payTo?.slice(0, 10))}…</span>. Brand agent <span class="mono">${esc(kv.brand.slice(0, 10))}…</span>. Record signed by Aisle: <a href="/data/kite-views.json">kite-views.json</a>.`;
+}
+
 // ---- honesty numbers ----
 if (evalr) {
   const A = evalr.A, B = evalr.B, C = evalr.C, D = evalr.D;

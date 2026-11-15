@@ -1,8 +1,9 @@
-.env
-.env.*
-node_modules/
-.kpass/
 *.key
-.vercel
 .aisle-signing-key.pem
 .aisle-treasury-key
+.brand-testnet-key
+.env
+.env.*
+.kpass/
+.vercel
+node_modules/

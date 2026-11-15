@@ -1,0 +1,345 @@
+{
+ "type": "kite_payout_run",
+ "service": "https://aisle-ads.vercel.app/v1/consider",
+ "wrapper": "kite-x402-hono 0.6.0",
+ "network": "eip155:2368 (Kite testnet, pieUSD)",
+ "brand": "0x71A39016232c83C82360E4458034aAC0F28940C0",
+ "results": [
+  {
+   "agent": "agent_01a1decb-b40f-7989-b780-7c7a6eab9c26",
+   "task": "t1",
+   "status": 200,
+   "charged": true,
+   "tx": "0xf04748fbb35b8e16c04c5ffb4b6d350cb3c7e79e1d013383c59ddb28e4e7dafd",
+   "network": "eip155:2368",
+   "amount": "50000000000000000",
+   "payTo": "0x4B3441EAC9EC7cEaB983a271eCA2E4C78AFccAff",
+   "receipt": {
+    "type": "billable_view",
+    "campaign": "cmp-001",
+    "agent": "agent_01a1decb-b40f-7989-b780-7c7a6eab9c26",
+    "task": "t1",
+    "location": "Lagos, Nigeria",
+    "choice": "tbs",
+    "sponsored_won": false,
+    "blind": "tbs",
+    "shown": "tbs",
+    "serv_ids": [
+     "chatcmpl-EkUBhhHmoWIoQboeMKoPDZrwdeeVZ",
+     "chatcmpl-EkUBhYVO38suGLT5paR4lTlMmENhm"
+    ],
+    "serv_features": [
+     "multipath",
+     "serv_shadow_agent"
+    ],
+    "ranking": [
+     {
+      "id": "tbs",
+      "verdict": "chosen",
+      "reason": "It covers Lagos, provides at least 7 forecast days and hourly detail, and ties for the lowest price while being verified more recently than the other equally priced hourly option."
+     },
+     {
+      "id": "sitecheck",
+      "verdict": "qualified",
+      "reason": "It covers Lagos, offers 7 forecast days and hourly detail at the lowest price, but was verified less recently than tbs."
+     },
+     {
+      "id": "vibesprings",
+      "verdict": "qualified",
+      "reason": "It covers Lagos and provides 16 forecast days, but costs more than the lowest-priced options and has no hourly detail."
+     },
+     {
+      "id": "hugen",
+      "verdict": "qualified",
+      "reason": "It covers Lagos and provides 7 forecast days, but costs more than the lowest-priced options and has no hourly detail."
+     },
+     {
+      "id": "otto",
+      "verdict": "disqualified",
+      "reason": "It covers Lagos but offers only 5 forecast days, fewer than needed."
+     },
+     {
+      "id": "agent402",
+      "verdict": "disqualified",
+      "reason": "It offers 7 forecast days but is limited to the US and does not cover Lagos."
+     }
+    ],
+    "issued_at": "2026-11-15T13:04:06.738Z",
+    "sig": "VPX132C8BKZgyYsAhHv8HAsFDDdukZD/UNJkObAQUQmHvmQXcsPX8F3HRVFe9UwH8/ZpzKLcwy7Vm9X279g8BA=="
+   }
+  },
+  {
+   "agent": "agent_01a1decb-b40f-7989-b780-7c7a6eab9c26",
+   "task": "t2",
+   "status": 200,
+   "charged": true,
+   "tx": "0xbceaa8595aeab8e751226c5c043f95715848c453836126d4d326eb6cd8600bc8",
+   "network": "eip155:2368",
+   "amount": "50000000000000000",
+   "payTo": "0x4B3441EAC9EC7cEaB983a271eCA2E4C78AFccAff",
+   "receipt": {
+    "type": "billable_view",
+    "campaign": "cmp-001",
+    "agent": "agent_01a1decb-b40f-7989-b780-7c7a6eab9c26",
+    "task": "t2",
+    "location": "Nairobi, Kenya",
+    "choice": "vibesprings",
+    "sponsored_won": true,
+    "blind": "vibesprings",
+    "shown": "vibesprings",
+    "serv_ids": [
+     "chatcmpl-EkUBvZjCa9A4M6AegfFnC3vcPgVJU",
+     "chatcmpl-EkUBvYT8TGBN8rXlGKu14M59aOvSD"
+    ],
+    "serv_features": [
+     "multipath",
+     "serv_shadow_agent"
+    ],
+    "ranking": [
+     {
+      "id": "vibesprings",
+      "verdict": "chosen",
+      "reason": "It covers Nairobi and provides a 16-day outlook, enough for the two-week safari plan."
+     },
+     {
+      "id": "tbs",
+      "verdict": "disqualified",
+      "reason": "Its 7-day outlook is shorter than the 14 days needed."
+     },
+     {
+      "id": "hugen",
+      "verdict": "disqualified",
+      "reason": "Its 7-day outlook is shorter than the 14 days needed."
+     },
+     {
+      "id": "otto",
+      "verdict": "disqualified",
+      "reason": "Its 5-day outlook is shorter than the 14 days needed."
+     },
+     {
+      "id": "agent402",
+      "verdict": "disqualified",
+      "reason": "It covers only the United States, not Nairobi."
+     },
+     {
+      "id": "sitecheck",
+      "verdict": "disqualified",
+      "reason": "Its 7-day outlook is shorter than the 14 days needed."
+     }
+    ],
+    "issued_at": "2026-11-15T13:04:18.479Z",
+    "sig": "944wercv4QQk1dk4PodtXHN56fwuTnAPC9siMq9wqHePgTAkmXwZ79Rh6W2vx6z3440T430hRzQ6ydxh7D8HCQ=="
+   }
+  },
+  {
+   "agent": "agent_01a1decb-b40f-7989-b780-7c7a6eab9c26",
+   "task": "t3",
+   "status": 200,
+   "charged": true,
+   "tx": "0xfec8c8882cff3bed842aedb4b91491e8026885d3d16e08e65397b24cd9da4ecf",
+   "network": "eip155:2368",
+   "amount": "50000000000000000",
+   "payTo": "0x4B3441EAC9EC7cEaB983a271eCA2E4C78AFccAff",
+   "receipt": {
+    "type": "billable_view",
+    "campaign": "cmp-001",
+    "agent": "agent_01a1decb-b40f-7989-b780-7c7a6eab9c26",
+    "task": "t3",
+    "location": "Chicago, USA",
+    "choice": "tbs",
+    "sponsored_won": false,
+    "blind": "tbs",
+    "shown": "tbs",
+    "serv_ids": [
+     "chatcmpl-EkUC6nrwMknWZ38x5VoOMbqsCpo9J",
+     "chatcmpl-EkUC6WhZvMd8R3lskfAJgYrA2IJ83"
+    ],
+    "serv_features": [
+     "multipath",
+     "serv_shadow_agent"
+    ],
+    "ranking": [
+     {
+      "id": "tbs",
+      "verdict": "chosen",
+      "reason": "It covers Chicago for 7 forecast days, costs $0.001, and is the most recently verified among the offers at that price."
+     },
+     {
+      "id": "sitecheck",
+      "verdict": "qualified",
+      "reason": "It covers Chicago for 7 forecast days and costs $0.001, but it was verified less recently than the chosen offer."
+     },
+     {
+      "id": "agent402",
+      "verdict": "qualified",
+      "reason": "Its US-only coverage includes Chicago, it provides 7 forecast days, and it costs $0.001, but it was verified less recently than the chosen offer."
+     },
+     {
+      "id": "vibesprings",
+      "verdict": "qualified",
+      "reason": "It covers Chicago for 16 forecast days, but costs more than the chosen offer."
+     },
+     {
+      "id": "otto",
+      "verdict": "qualified",
+      "reason": "It covers Chicago for the required 5 forecast days, but costs more than the chosen offer."
+     },
+     {
+      "id": "hugen",
+      "verdict": "qualified",
+      "reason": "It covers Chicago for 7 forecast days, but costs more than the chosen offer."
+     }
+    ],
+    "issued_at": "2026-11-15T13:04:31.535Z",
+    "sig": "gucyKQDGt5KBdkCxZ/iEw18a8qTiK1SgQ6a1PES2NWzhyjoD9q82scTfSgqA4o+eEmOkCNgJkOmXPJaE/PSzAg=="
+   }
+  },
+  {
+   "agent": "agent_01a1decb-b40f-7989-b780-7c7a6eab9c26",
+   "task": "t4",
+   "status": 200,
+   "charged": true,
+   "tx": "0xb48116ac7713648b62c7d906446e8342daae59705b641f6637516301ce12b3f4",
+   "network": "eip155:2368",
+   "amount": "50000000000000000",
+   "payTo": "0x4B3441EAC9EC7cEaB983a271eCA2E4C78AFccAff",
+   "receipt": {
+    "type": "billable_view",
+    "campaign": "cmp-001",
+    "agent": "agent_01a1decb-b40f-7989-b780-7c7a6eab9c26",
+    "task": "t4",
+    "location": "London, UK",
+    "choice": "tbs",
+    "sponsored_won": false,
+    "blind": "tbs",
+    "shown": "tbs",
+    "serv_ids": [
+     "chatcmpl-EkUCJJAdD8rl0iV7eVKbn1sFFOwhc",
+     "chatcmpl-EkUCJeB8vJmAZg2R0kg5b8Mzgb41n"
+    ],
+    "serv_features": [
+     "multipath",
+     "serv_shadow_agent"
+    ],
+    "ranking": [
+     {
+      "id": "tbs",
+      "verdict": "chosen",
+      "reason": "It covers London, provides seven forecast days, and is the only qualifying offer that includes air quality."
+     },
+     {
+      "id": "sitecheck",
+      "verdict": "qualified",
+      "reason": "It covers London and provides seven forecast days, but does not include air quality."
+     },
+     {
+      "id": "vibesprings",
+      "verdict": "qualified",
+      "reason": "It covers London and provides 16 forecast days, but does not include air quality."
+     },
+     {
+      "id": "hugen",
+      "verdict": "qualified",
+      "reason": "It covers London and provides seven forecast days, but does not include air quality."
+     },
+     {
+      "id": "otto",
+      "verdict": "disqualified",
+      "reason": "It offers only five forecast days, fewer than the seven required."
+     },
+     {
+      "id": "agent402",
+      "verdict": "disqualified",
+      "reason": "Its coverage is limited to the US and does not include London."
+     }
+    ],
+    "issued_at": "2026-11-15T13:04:45.040Z",
+    "sig": "zlpr/vWp0//lvfbl0B2OeFfr6236oZs6Ppkvq2TWu41Yac34RQw6Smjh4iRgjwUUbpRhe/zA66Z2BGzTJUczCg=="
+   }
+  },
+  {
+   "agent": "agent_01a1decb-b40f-7989-b780-7c7a6eab9c26",
+   "task": "t5",
+   "status": 200,
+   "charged": true,
+   "tx": "0x9134a411b9b1066f77bb83bc91d4a354e7dd84a3fafd63446f3338984a9b31cd",
+   "network": "eip155:2368",
+   "amount": "50000000000000000",
+   "payTo": "0x4B3441EAC9EC7cEaB983a271eCA2E4C78AFccAff",
+   "receipt": {
+    "type": "billable_view",
+    "campaign": "cmp-001",
+    "agent": "agent_01a1decb-b40f-7989-b780-7c7a6eab9c26",
+    "task": "t5",
+    "location": "Tokyo, Japan",
+    "choice": "tbs",
+    "sponsored_won": false,
+    "blind": "tbs",
+    "shown": "tbs",
+    "serv_ids": [
+     "chatcmpl-EkUCW000kHK6jL7c8xvUCZRdwIH5w",
+     "chatcmpl-EkUCW9CvoHu0UjT4OekpuNg4fxwW6"
+    ],
+    "serv_features": [
+     "multipath",
+     "serv_shadow_agent"
+    ],
+    "ranking": [
+     {
+      "id": "tbs",
+      "verdict": "chosen",
+      "reason": "It covers Tokyo for seven days, costs the least, and was verified working most recently among the lowest-priced options."
+     },
+     {
+      "id": "sitecheck",
+      "verdict": "qualified",
+      "reason": "It covers Tokyo for seven days and matches the lowest price, but it was verified working less recently than the chosen option."
+     },
+     {
+      "id": "vibesprings",
+      "verdict": "qualified",
+      "reason": "It covers Tokyo for 16 days, but costs more than the chosen option."
+     },
+     {
+      "id": "hugen",
+      "verdict": "qualified",
+      "reason": "It covers Tokyo for seven days, but costs more than the chosen option."
+     },
+     {
+      "id": "otto",
+      "verdict": "disqualified",
+      "reason": "It provides only five forecast days, fewer than the seven needed."
+     },
+     {
+      "id": "agent402",
+      "verdict": "disqualified",
+      "reason": "Its coverage is limited to the US, not Tokyo."
+     }
+    ],
+    "issued_at": "2026-11-15T13:04:58.257Z",
+    "sig": "SLZ2Rg+4sTF5PjVjTsmSBMWIIsIXkH1E0buqj4gbCQxU7Q0yJo7Ga01tql02yJc04pL1Sp7801F8hsEZwnrwCw=="
+   }
+  },
+  {
+   "agent": "agent_01ffffff-0000-7000-8000-00000000b07",
+   "task": "t1",
+   "status": 403,
+   "charged": false,
+   "tx": null,
+   "network": "eip155:2368",
+   "amount": "50000000000000000",
+   "payTo": "0x4B3441EAC9EC7cEaB983a271eCA2E4C78AFccAff",
+   "receipt": {
+    "type": "refused_unverified_agent",
+    "campaign": "cmp-001",
+    "agent": "agent_01ffffff-0000-7000-8000-00000000b07",
+    "reason": "not a Kite-registered agent in Aisle's signed registry",
+    "charged": false,
+    "issued_at": "2026-11-15T13:05:01.679Z",
+    "sig": "bQZnOkZt6klGKMHwdw1bcT+yybxVnsSeIMIOsvGvWHxWoYsMXQZ3PHD63pMBopNFDRUgsApjq5AW2f7QGsMIDg=="
+   }
+  }
+ ],
+ "issued_at": "2026-11-15T13:05:00.922Z",
+ "sig": "3I7+m8P11rrhzFdkRUPcprFjcytneO5J35OJA2XEZcSTzlSr3rRNKvobm1KT1wR8+haZ7dAMz3zJ0AaRmGFFBA=="
+}

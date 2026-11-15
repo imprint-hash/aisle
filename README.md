@@ -46,6 +46,25 @@ Aisle changes three things:
 
 The demo advertiser is run by the Aisle team, promoting vibesprings.net's listed forecast. It is **not affiliated with vibesprings.net**; the purchases themselves are real calls to real sellers in Kite's catalogue.
 
+## Paid per view on Kite's own chain (kite-x402-hono, Kite's priority repo)
+
+Aisle's payout service runs Kite's official **[`kite-x402-hono`](https://www.npmjs.com/package/kite-x402-hono)** wrapper (0.6.0) in front of Aisle's check, at `https://aisle-ads.vercel.app/v1/consider` (discovery: `/.well-known/x402`, health: `/healthz`).
+
+- The brand's agent calls `/v1/consider?campaign=…&agent=…&task=…` and gets an x402 `402` with the terms: **$0.05 in pieUSD on Kite testnet (eip155:2368)**, paid straight to the shopper's wallet.
+- It signs an EIP-3009 authorization with Coinbase's official x402 client, capped by `spendControls` to that single asset and at most 0.06 per payment, and then retries.
+- The wrapper asks Aisle's check (`api/consider.mjs`, locked to the wrapper by a shared secret). It settles through Kite's facilitator **only if the check returns 200**, meaning a registered agent and an honest choice. If the agent is unregistered (403) or sponsorship influenced the choice (409), **the brand is not charged**.
+
+| Agent | Task | Aisle's answer | Charged | Tx (Kite testnet) |
+|---|---|---|---|---|
+| `agent_01a1decb…` (Kite-registered) | Lagos | billable view | $0.05 | [0xf047…dafd](https://testnet.kitescan.ai/tx/0xf04748fbb35b8e16c04c5ffb4b6d350cb3c7e79e1d013383c59ddb28e4e7dafd) |
+| `agent_01a1decb…` | Nairobi | billable view | $0.05 | [0xbcea…0bc8](https://testnet.kitescan.ai/tx/0xbceaa8595aeab8e751226c5c043f95715848c453836126d4d326eb6cd8600bc8) |
+| `agent_01a1decb…` | Chicago | billable view | $0.05 | [0xfec8…cf](https://testnet.kitescan.ai/tx/0xfec8c8882cff3bed842aedb4b91491e8026885d3d16e08e65397b24cd9da4ecf) |
+| `agent_01a1decb…` | London | billable view | $0.05 | [0xb481…f4](https://testnet.kitescan.ai/tx/0xb48116ac7713648b62c7d906446e8342daae59705b641f6637516301ce12b3f4) |
+| `agent_01a1decb…` | Tokyo | billable view | $0.05 | [0x9134…1cd](https://testnet.kitescan.ai/tx/0x9134a411b9b1066f77bb83bc91d4a354e7dd84a3fafd63446f3338984a9b31cd) |
+| `agent_01ffffff…` (fake) | Lagos | refused, unverified agent (403) | **$0** | none |
+
+The shopper's pieUSD balance went from 0 to **0.25**. Signed record: [`data/kite-views.json`](data/kite-views.json). Reproduce: `node scripts/brand-kite.mjs`.
+
 ## Honesty numbers (published, not promised)
 
 ![Earnings and honesty numbers](docs/img/earnings-honesty.png)
@@ -73,12 +92,13 @@ Run them yourself: `node scripts/eval.mjs` (needs a SERV API key and the `kpass`
 - **Agent identity:** the shopper agent is registered with `kpass agent:register` under a passkey-backed Kite account. Aisle's verification rejects any agent ID Kite doesn't know.
 - **Agent Passport spending session:** `kpass session create` with per-payment and total caps, approved by passkey; every purchase is `kpass session execute`, an x402 call to a real catalogue seller. Kite routed the owner's **Arc** USDC to pay **Base** sellers automatically.
 - **Kite catalogue (`ksearch service search`):** the six competing offers are real weather services from Kite's catalogue.
+- **`kite-x402-hono` (priority repo):** Aisle's per-view payout service on Kite's chain, settled by Kite's facilitator only when Aisle's check passes.
 - **Wallet transfers:** campaign settlement through Kite wallet send, with **passkey step-up** on every transfer.
 - **Identity onboarding:** the account claimed `ind-imprint` and submitted onboarding, so the shopper agent can be listed in Kite's public directory once onboarding is verified.
 
 ## Honest limits (what we found while building)
 
-- **Kite Passport only pays hosts in Kite's executable catalogue.** We built and deployed our own x402 payout endpoint (on Base, settled by Kite's Pieverse facilitator), but Passport refused it (`host_not_in_executable_catalog`). So per-view payouts are **settled in one passkey-approved Kite wallet transfer per campaign** instead of streaming per view. Once Aisle's endpoint is allowlisted, each view can settle live through the brand's session.
+- **Kite Passport only pays hosts in Kite's executable catalogue.** Passport refused our own payout endpoint (`host_not_in_executable_catalog`). So the mainnet run settles **in one passkey-approved Kite wallet transfer per campaign**. Per-view settlement is shown on **Kite testnet** through `kite-x402-hono` (above), paid by a brand agent with its own key. Once Aisle is listed in Kite's catalogue, a brand's Passport session can pay each view live on mainnet.
 - **Kite's wallet-send approval link expires in about a minute**, so the settlement transfers were approved from the Passport dashboard. They are the same Kite transfers, verified on Base above.
 - **The developer's 15% is held in the Aisle treasury** for payout; with a single developer in the demo, a third transfer per view would cost more in fees than it pays.
 - **A registered agent is not a unique human.** Aisle claims "registered agent under an accountable Kite account", nothing more.
@@ -105,6 +125,8 @@ node scripts/eval.mjs              # honesty tests A–D
 | `lib/x402.mjs` | The x402 seller we built for per-view payouts (blocked by the catalogue allowlist, see limits) |
 | `scripts/run.mjs` | The real end-to-end run |
 | `scripts/eval.mjs` | Honesty tests A–D |
+| `api/wrap.mjs`, `api/consider.mjs` | Kite's `kite-x402-hono` payout wrapper and Aisle's check behind it |
+| `scripts/brand-kite.mjs` | The brand agent paying per view on Kite testnet (x402, pieUSD) |
 | `api/rank.mjs`, `public/` | The website and live demo |
 
 MIT licence.

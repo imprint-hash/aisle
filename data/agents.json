@@ -1,0 +1,15 @@
+{
+ "type": "agent_registry",
+ "agents": [
+  {
+   "agent_id": "agent_01a1decb-b40f-7989-b780-7c7a6eab9c26",
+   "type": "shopping-agent",
+   "kite_owner": "user_01a1dea7-602c-7521-9a3e-cb835ff22b13",
+   "registered_at": "2026-11-15T10:40:54.284411Z",
+   "verified_via": "kpass user agents (Kite Passport, passkey-backed account)"
+  }
+ ],
+ "checked_at": "2026-11-15T12:38:21.009Z",
+ "issued_at": "2026-11-15T12:38:21.011Z",
+ "sig": "CzsL0G8toIqpZKTVw76MRCRkiq9AuFpwhj6J20VMm7SPbyoNgi+UIK3MoSHgFz+9Sbf6C1GmD3GnQOmdioWBCA=="
+}
