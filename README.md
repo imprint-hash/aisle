@@ -5,7 +5,7 @@
 Built for the **OpenServ SERV Hackathon, Edition 02 · Kite track**.
 
 - **Live:** https://aisle-ads.vercel.app
-- **Demo video:** [VIDEO LINK]
+- **Demo video (90 s):** https://youtu.be/HSmyQka81F8
 - **Every number on the site comes from signed records:** [`data/run.json`](data/run.json) (the real run) and [`data/eval.json`](data/eval.json) (the honesty tests).
 
 ![Aisle](docs/img/hero.png)
