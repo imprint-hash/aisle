@@ -1,4 +1,4 @@
-# Aisle · Ads that pay you, not bots
+# Aisle · The ad network that pays the shopper
 
 **The advertising marketplace for the agent economy.** Brands pay to be *considered* by your AI shopping agent. Only Kite-registered agents earn, the money goes to you, and **sponsorship can never buy the choice**.
 
