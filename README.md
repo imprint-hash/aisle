@@ -10,6 +10,8 @@ Built for the **OpenServ SERV Hackathon, Edition 02 · Kite track**.
 
 ![Aisle](docs/img/hero.png)
 
+![A live honest ranking: the sponsored seller won on merit](docs/img/try.png)
+
 > **Judges, start here (2 minutes, no wallet, nothing paid)**
 > 1. Open the [live site](https://aisle-ads.vercel.app) → **Run a live honest ranking**. Pick a task and a sponsor. SERV ranks six real Kite catalogue services twice, sponsor hidden and shown, and you see whether sponsorship moved the choice.
 > 2. Scroll to **One campaign, start to finish**. Every purchase and payout links to a real USDC transaction on Base.
@@ -32,6 +34,8 @@ Aisle changes three things:
 
 ### Business model
 Brands set a price per verified view and a budget. Each verified view splits **60% shopper / 25% Aisle / 15% agent developer**. Aisle's revenue is its 25% of every verified view. Example: a $500 campaign at $0.05 buys 10,000 verified views: $300 to shoppers, $125 to Aisle, $75 to agent developers.
+
+![Start a campaign: SERV approves the ad and plans it](docs/img/brands.png)
 
 **Try it as a brand:** the site's **Start a campaign** form lets any brand draft a campaign. SERV screens the ad live (pushy copy is refused), and Aisle returns the plan, the split and the Kite x402 payment terms as a signed draft (`api/campaign.mjs`; nothing stored, no money moves).
 
@@ -73,11 +77,13 @@ Aisle's payout service runs Kite's official **[`kite-x402-hono`](https://www.npm
 | `agent_01a1decb…` | Tokyo | billable view | $0.05 | [0x9134…1cd](https://testnet.kitescan.ai/tx/0x9134a411b9b1066f77bb83bc91d4a354e7dd84a3fafd63446f3338984a9b31cd) |
 | `agent_01ffffff…` (fake) | Lagos | refused, unverified agent (403) | **$0** | none |
 
+![Paid per view on Kite's own chain](docs/img/kite.png)
+
 The shopper's pieUSD balance went from 0 to **0.25**. Signed record: [`data/kite-views.json`](data/kite-views.json). Reproduce: `node scripts/brand-kite.mjs`.
 
 ## Honesty numbers (published, not promised)
 
-![Earnings and honesty numbers](docs/img/earnings-honesty.png)
+![Honesty numbers](docs/img/earnings-honesty.png)
 
 | Test | Result |
 |---|---|

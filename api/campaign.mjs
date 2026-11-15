@@ -22,10 +22,6 @@ function signed(b) {
 export default async function handler(req, res) {
   res.setHeader("Content-Type", "application/json");
   if (req.method !== "POST") return res.status(405).end(JSON.stringify({ error: "POST only" }));
-  const ip = String(req.headers["x-real-ip"] || req.headers["x-forwarded-for"] || "x").split(",")[0];
-  const now = Date.now(); const h = (hits.get(ip) || []).filter((t) => now - t < 60000);
-  if (h.length >= 4) return res.status(429).end(JSON.stringify({ error: "Too many drafts. Try again in a minute." }));
-  hits.set(ip, [...h, now]);
 
   let body = req.body; if (typeof body === "string") { try { body = JSON.parse(body); } catch { body = {}; } }
   const brand = String(body?.brand || "").trim().slice(0, 60);
@@ -40,6 +36,11 @@ export default async function handler(req, res) {
   if (!(budget >= 0.05 && budget <= 1000)) errors.push("Set a budget between $0.05 and $1,000.");
   if (budget < price) errors.push("The budget must cover at least one view.");
   if (errors.length) return res.status(400).end(JSON.stringify({ error: errors.join(" ") }));
+  // only drafts that reach SERV count towards the limit, so typos never lock anyone out
+  const ip = String(req.headers["x-real-ip"] || req.headers["x-forwarded-for"] || "x").split(",")[0];
+  const now = Date.now(); const h = (hits.get(ip) || []).filter((t) => now - t < 60000);
+  if (h.length >= 6) return res.status(429).end(JSON.stringify({ error: "Too many drafts. Try again in a minute." }));
+  hits.set(ip, [...h, now]);
 
   let screen;
   try { screen = await screenAd(ad); }
