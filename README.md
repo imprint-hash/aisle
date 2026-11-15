@@ -4,14 +4,14 @@
 
 Built for the **OpenServ SERV Hackathon, Edition 02 · Kite track**.
 
-- **Live:** https://aisle-delta-woad.vercel.app
+- **Live:** https://aisle-ads.vercel.app
 - **Demo video:** [VIDEO LINK]
 - **Every number on the site comes from signed records:** [`data/run.json`](data/run.json) (the real run) and [`data/eval.json`](data/eval.json) (the honesty tests).
 
 ![Aisle](docs/img/hero.png)
 
 > **Judges, start here (2 minutes, no wallet, nothing paid)**
-> 1. Open the [live site](https://aisle-delta-woad.vercel.app) → **Run a live honest ranking**. Pick a task and a sponsor. SERV ranks six real Kite catalogue services twice, sponsor hidden and shown, and you see whether sponsorship moved the choice.
+> 1. Open the [live site](https://aisle-ads.vercel.app) → **Run a live honest ranking**. Pick a task and a sponsor. SERV ranks six real Kite catalogue services twice, sponsor hidden and shown, and you see whether sponsorship moved the choice.
 > 2. Scroll to **One campaign, start to finish**. Every purchase and payout links to a real USDC transaction on Base.
 > 3. Click **Verify all receipts in my browser**. Your browser checks Aisle's Ed25519 signature on every record.
 
