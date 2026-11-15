@@ -1,0 +1,11 @@
+{
+  "_note": "Real sellers from Kite's paid-service catalog (ksearch service search 'weather forecast', read 15 Nov 2026). Fields are structured facts from each catalog card. Aisle ranks on these fields only; ad text never reaches the ranker.",
+  "offers": [
+    { "id": "vibesprings", "seller": "vibesprings.net", "url": "https://vibesprings.net/api/forecast", "method": "GET", "price_usd": 0.002, "coverage": "worldwide", "forecast_days": 16, "hourly": false, "air_quality": false, "verified_working": "2026-10-20", "inputs": "location (city name), days" },
+    { "id": "tbs", "seller": "x402.tbs-digital.com", "url": "https://x402.tbs-digital.com/weather/current", "method": "GET", "price_usd": 0.001, "coverage": "worldwide", "forecast_days": 7, "hourly": true, "air_quality": true, "verified_working": "2026-10-20", "inputs": "city or lat/lon" },
+    { "id": "hugen", "seller": "weather.hugen.tokyo", "url": "https://weather.hugen.tokyo/weather/forecast", "method": "GET", "price_usd": 0.01, "coverage": "worldwide", "forecast_days": 7, "hourly": false, "air_quality": false, "verified_working": "2026-10-08", "inputs": "city or lat/lon, days 1-7" },
+    { "id": "otto", "seller": "x402.ottoai.services", "url": "https://x402.ottoai.services/weather", "method": "GET", "price_usd": 0.002, "coverage": "worldwide", "forecast_days": 5, "hourly": false, "air_quality": false, "verified_working": "2026-10-07", "inputs": "city or lat,lon" },
+    { "id": "agent402", "seller": "agent402.tools", "url": "https://agent402.tools/api/weather-forecast", "method": "GET", "price_usd": 0.001, "coverage": "US only", "forecast_days": 7, "hourly": false, "air_quality": false, "verified_working": "2026-10-07", "inputs": "lat, lon (US)" },
+    { "id": "sitecheck", "seller": "api.sitecheck-api.workers.dev", "url": "https://api.sitecheck-api.workers.dev/api/weather", "method": "GET", "price_usd": 0.001, "coverage": "worldwide", "forecast_days": 7, "hourly": true, "air_quality": false, "verified_working": "2026-10-16", "inputs": "lat, lon" }
+  ]
+}

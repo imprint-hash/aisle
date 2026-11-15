@@ -1,1 +1,96 @@
-<!doctype html><title>Aisle</title><p>Aisle</p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aisle · Ads that pay you, not bots</title>
+  <meta name="description" content="Brands pay to be considered by your AI shopping agent. Only Kite-registered agents earn, you get paid, and sponsorship can never buy the choice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111418'/%3E%3Cpath d='M14 46h36M14 32h36M14 18h36' stroke='%23F5C518' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top">
+    <a class="brand" href="/"><span class="mark" aria-hidden="true"></span>Aisle</a>
+    <nav aria-label="Sections"><a href="#try">Try it</a><a href="#run">Real run</a><a href="#earn">Earnings</a><a href="#honest">Honesty</a><a href="#how">How it works</a></nav>
+    <span class="pill">Kite mainnet · SERV Reasoning</span>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div>
+        <p class="kick">OpenServ SERV Hackathon 02 · Kite track</p>
+        <h1>Ads that pay <em>you</em>,<br>not bots.</h1>
+        <p class="lede">AI agents are starting to shop for people. Aisle lets brands pay to be <b>considered</b> by your shopping agent. Only Kite-registered agents earn, the money goes to you, and <b>sponsorship can never buy the choice</b>.</p>
+        <div class="cta"><a class="btn" href="#try">Judges, start here</a><a class="btn ghost" href="#run">See the real money</a></div>
+      </div>
+      <div class="shelf" aria-label="Example: three offers on your agent's shelf">
+        <div class="tag"><span class="seller">x402.tbs-digital.com</span><span class="price">$0.001</span><span class="meta">7 days · hourly · air quality</span></div>
+        <div class="tag sponsored"><span class="badge">Sponsored</span><span class="seller">vibesprings.net</span><span class="price">$0.002</span><span class="meta">16 days</span></div>
+        <div class="tag"><span class="seller">weather.hugen.tokyo</span><span class="price">$0.010</span><span class="meta">7 days</span></div>
+        <p class="shelf-note">Your agent ranks on facts only. The sponsor is paid-for attention, not a paid-for win.</p>
+      </div>
+    </section>
+
+    <section class="stats" id="stats" aria-label="Live numbers from the real run"></section>
+
+    <section id="try" class="block">
+      <p class="kick">Judges, start here · no wallet, nothing paid</p>
+      <h2>Run a live honest ranking</h2>
+      <p>Pick a shopping task and a sponsor. Aisle asks SERV Reasoning to rank six <b>real</b> weather services from Kite's catalogue twice: once with the sponsor <b>hidden</b>, once <b>shown</b>. If the two choices differ, sponsorship influenced the agent, and Aisle refuses to bill or buy.</p>
+      <form id="tryform" class="tryform">
+        <label>Shopping task <select name="task" id="task"></select></label>
+        <label>Sponsored seller <select name="sponsor" id="sponsor"></select></label>
+        <button class="btn" type="submit" id="trybtn">Rank it live</button>
+      </form>
+      <div id="tryout" aria-live="polite"></div>
+    </section>
+
+    <section id="run" class="block">
+      <p class="kick">Real run · campaign cmp-001 · real USDC</p>
+      <h2>One campaign, start to finish</h2>
+      <p class="muted" id="adv"></p>
+      <ol class="steps" id="steps"></ol>
+    </section>
+
+    <section id="earn" class="block">
+      <p class="kick">The shopper's side</p>
+      <h2>Your Aisle earnings</h2>
+      <div class="earn" id="earnings"></div>
+      <p class="muted">You never have to buy anything to earn from a verified view. Brands pay for your agent's honest consideration, not for a sale.</p>
+    </section>
+
+    <section id="honest" class="block">
+      <p class="kick">Published, not promised</p>
+      <h2>Honesty numbers</h2>
+      <div class="grid4" id="evalgrid"></div>
+      <p class="muted">Every number comes from real SERV calls in <code>scripts/eval.mjs</code>; full results in <a href="/data/eval.json">eval.json</a>.</p>
+    </section>
+
+    <section id="how" class="block">
+      <p class="kick">How it works</p>
+      <h2>Considered, not bought</h2>
+      <div class="how">
+        <div><h3>1 · Brand funds a campaign</h3><p>Price per verified view and a total budget. The ad text is untrusted: SERV screens it, and manipulative copy is refused before anything is billed.</p></div>
+        <div><h3>2 · Only real agents earn</h3><p>The shopper's agent must be a <b>Kite-registered agent linked to an authorised, passkey-backed Kite account</b>. Unregistered agents earn nothing.</p></div>
+        <div><h3>3 · Ranked on facts, twice</h3><p>SERV ranks structured facts (price, coverage, days, freshness) with <b>Multipath</b> and checks itself with <b>Shadow Agent</b>, once blind and once with the sponsor shown. Same answer, or no bill.</p></div>
+        <div><h3>4 · Real payments through Kite</h3><p>The agent buys the winner through its <b>Kite Passport spending session</b>. The brand settles verified views through a <b>Kite wallet transfer</b> approved by passkey: 60% to the shopper, 25% to Aisle, 15% to the agent's developer.</p></div>
+      </div>
+      <h3 class="sub">A billable view is</h3>
+      <ul class="rules" id="rules"></ul>
+      <h3 class="sub">Check a receipt yourself</h3>
+      <p>Every record above is signed by Aisle (Ed25519). Your browser checks the signatures against Aisle's public key, so an edited record fails.</p>
+      <button class="btn ghost" id="verifybtn" type="button">Verify all receipts in my browser</button>
+      <p id="verifyout" class="mono" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>Aisle · built for the OpenServ SERV Hackathon 02 (Kite track)</span>
+    <span><a href="https://github.com/imprint-hash/aisle">Code</a> · <a href="/data/run.json">run.json</a> · <a href="/data/eval.json">eval.json</a></span>
+  </footer>
+  <script src="/app.js" type="module"></script>
+</body>
+</html>

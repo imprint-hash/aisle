@@ -62,7 +62,7 @@
     "agent_developer": 0.0075
    },
    "issued_at": "2026-11-15T11:04:59.307Z",
-   "sig": "I8wqoNHUaxpABnXW6nydvxzGr12F0Q+DKMxVeF4CwJbneokGwWsVquB6yfCt7V86tIWrzixOundOEErXa1aABg=="
+   "sig": "eP8k6actR31KJKk/aO6THLQW+ctwG2UUJIQidmZGrNu+OWayomD3Je7GF1KVE7YprkIDlJ5tp6cdXOUXZ7ehDA=="
   },
   {
    "type": "billable_view",
@@ -125,7 +125,7 @@
     "agent_developer": 0.0075
    },
    "issued_at": "2026-11-15T11:05:09.938Z",
-   "sig": "RwOfuXkGzxqVk5uzeclwjFA7symQZAc2+tgNy55owt4LDY1nU/2CwvcqSBL7rdKwsU0JDTx/kZ83sBr5QXJVAA=="
+   "sig": "v7Gt7EntLjKsnfh1uzetkbLGMEkbhclHgLDr9BO4vFb2xUeZ7P0rOvptc2aZbt+ZZ25l7OoaGnuSJvPjy/2MAA=="
   },
   {
    "type": "billable_view",
@@ -188,7 +188,7 @@
     "agent_developer": 0.0075
    },
    "issued_at": "2026-11-15T11:05:24.980Z",
-   "sig": "4nIXEOlDyO7hQQ2W07c9sbpHKWrPw8IaRDfEXb1kdw48FrBIQDDV7c5EsAi/xDiUl2j5gMnf3pC7x+eDeGJmCw=="
+   "sig": "BPLTLBOnHLgYIq1uur099tdFZE+bmlArhYtTdSfN3lfocKdYzyxOCX1bb2N3U7kxDYhMy2Qw4GVidoQsT9dVDg=="
   },
   {
    "type": "billable_view",
@@ -251,7 +251,7 @@
     "agent_developer": 0.0075
    },
    "issued_at": "2026-11-15T11:05:34.706Z",
-   "sig": "UHZSMK49BEhHL5jGUn4f8jKQ3myhw1JugmKIwfrlj268iN+ti+2sNmjnwJv4UO2IIsYel5ip67n1QAnNinpbBw=="
+   "sig": "/quoTtSYHrYZDXeFw0S4CMd3c2Ylg5RsZQIimCLlgqMTUDMuGfj83nEwTlSxXdq/Z7bsMLRmvB/3zoTbM2UtAQ=="
   },
   {
    "type": "billable_view",
@@ -314,7 +314,7 @@
     "agent_developer": 0.0075
    },
    "issued_at": "2026-11-15T11:05:44.456Z",
-   "sig": "euTQfVK80/nbM1C2GkdbJP/rOq1DY54bdoHX+oU5GRVV9PPtpP3YShmZUXRDgJSOLxPw/GOxQNc5SkMW8/uFBw=="
+   "sig": "r1r0vOqxH4u+zuKpksdBp8LZUxGHSSHNa9zDsJrPRHP0NhqSj9llaXQvnnHuufQv91GRNRcHicQy2++7tMlpCw=="
   }
  ],
  "refusals": [
@@ -369,7 +369,7 @@
     }
    ],
    "issued_at": "2026-11-15T11:11:04.959Z",
-   "sig": "fTC/Kj4zcOf0iSBMyFahgR5PBtPqVfqmsSRKJDyHIfVEY3t/BB01hBhL2PFGsPUMavq+sgZohC0azmwsHnCBCQ=="
+   "sig": "1ZRX2duL51gzP/oIPrBAZ/Gq6+dkwxdHTMpR7oar7FnugmKdU87rNPDbyRgEd36hMghZ9kqt3LFmbZEJtI0dCA=="
   },
   {
    "type": "purchase",
@@ -396,7 +396,7 @@
     }
    ],
    "issued_at": "2026-11-15T11:11:10.177Z",
-   "sig": "qIIIuCslTuSCh28kuuLcBpHK21EtDO6Zs9hb92X4IxsWNNyt49mVlUGqVlCk7B2RO3Ub0/lScZufKjgrSOL7AA=="
+   "sig": "QOCzoYqo+WOt765+mJufnVTjR40/J3whCw094LQIRteCqA6jBj/9vmK2dx9XrTkTcyqUNWgSmgPr0BnbPNJHCg=="
   },
   {
    "type": "purchase",
@@ -410,7 +410,7 @@
     }
    ],
    "issued_at": "2026-11-15T11:11:12.785Z",
-   "sig": "oycGEzMbFEtGcCpR05naezUtCKolPzmGl2sSwD4uRBUW4bXbZfUCBlLYqslUQnb49hJDycgCZ5ZzOouwaeVrCw=="
+   "sig": "Cx/txde7yPJFbh8GhYelU8cU0cU488UcuJvgF+zOqTHI3Ou/e5tQLqZHrHvrG37I94ndSa3Tz0seuRhAzwDcCQ=="
   },
   {
    "type": "purchase",
@@ -437,7 +437,7 @@
     }
    ],
    "issued_at": "2026-11-15T11:11:18.558Z",
-   "sig": "FiRGGQZyE3kSJbF31ZIL5PhnyEMiJ8Z5vKh/RXEps1rcpVp66ekMvia7+xFmbENjZBStN3ZdToa8pCQulzJdCQ=="
+   "sig": "BFvu8QiWz1VkHvMjZ3jZlkQUMPpmOU7frAf/6RsTbxIjn64L4kSl5+kR/DKZYvygBLx8HZdBEJXwhPFpVuktAQ=="
   }
  ],
  "settlements": [
