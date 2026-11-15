@@ -22,13 +22,10 @@ code, .mono { font-family: var(--mono); font-size: .88em; }
 :focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
 
 /* ---------- hero over the painting ---------- */
-.hero-wrap { position: relative; min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; color: var(--cream);
+.hero-wrap { position: relative; min-height: 92vh; min-height: 92svh; display: flex; flex-direction: column; color: var(--cream);
   overflow: hidden; }
-.kites { position: absolute !important; inset: 0; pointer-events: none; }
-.kites img { position: absolute; width: calc(56px * var(--s, 1)); opacity: .7; filter: drop-shadow(0 24px 50px rgba(218,160,56,.3));
-  animation: drift var(--d, 18s) ease-in-out infinite alternate; transform: rotate(var(--r, 0deg)); }
-@keyframes drift { to { transform: translate(-40px, -34px) rotate(calc(var(--r, 0deg) * -1)); } }
-.hero-wrap > * { position: relative; }
+.hero-wrap > * { position: relative; z-index: 2; }
+.hero-wrap > .scene { position: absolute; z-index: 1; }
 .top { display: flex; gap: 22px; align-items: center; padding: 16px clamp(16px, 4vw, 48px); }
 .brand { display: inline-flex; gap: 10px; align-items: center; font: 800 1.45rem var(--display); letter-spacing: -.03em; text-decoration: none; color: var(--cream); }
 .mark { width: 26px; height: 26px; border-radius: 7px; background: var(--amber); display: grid; place-items: center; }
@@ -37,7 +34,7 @@ code, .mono { font-family: var(--mono); font-size: .88em; }
 .top nav a:hover { color: var(--cream); }
 .pill { margin-left: auto; font: 500 .7rem var(--mono); letter-spacing: .12em; text-transform: uppercase; padding: 6px 12px; border: 1px solid rgba(254,248,240,.35); border-radius: 999px; color: rgba(254,248,240,.85); }
 .pill i { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #9fd14b; margin-right: 8px; vertical-align: middle; }
-.hero { margin-top: auto; padding: 0 clamp(16px, 4vw, 48px) 34px; max-width: 780px; }
+.hero { margin: auto 0; padding: 40px clamp(16px, 4vw, 48px) 48px; max-width: 780px; will-change: transform, opacity; }
 .kick { font: 500 .74rem var(--mono); letter-spacing: .18em; text-transform: uppercase; margin: 0 0 14px; }
 .hero .kick { color: rgba(254,248,240,.75); }
 .hero h1 { font: 800 clamp(4.4rem, 11vw, 8.5rem)/.92 var(--display); letter-spacing: -.045em; margin: 0 0 18px; }
@@ -103,9 +100,65 @@ th { font: 500 .66rem var(--mono); letter-spacing: .12em; text-transform: upperc
 .sub { margin-top: 30px; } .rules { margin: 0; padding-left: 20px; } .rules li { margin: 4px 0; }
 .foot { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 28px clamp(16px, 4vw, 48px); border-top: 1px solid var(--line); color: rgba(254,248,240,.7); font-size: .88rem; }
 
+/* ---------- hero scene: drifting glass kites + the Kite mark assembling in 3D ---------- */
+.scene { inset: 0; perspective: 1100px; perspective-origin: 70% 40%; pointer-events: none; will-change: transform; }
+.aurora { position: absolute; inset: 0; overflow: hidden; }
+.aurora i { position: absolute; bottom: -20%; border-radius: 50%; filter: blur(60px); will-change: transform, opacity; }
+.aurora i:nth-child(1) { width: 80vw; height: 60vh; left: 30%; background: radial-gradient(closest-side, rgba(218,160,56,.38), transparent); animation: glow 18s ease-in-out infinite alternate; }
+.aurora i:nth-child(2) { width: 50vw; height: 45vh; left: -12%; background: radial-gradient(closest-side, rgba(95,121,255,.3), transparent); animation: glow 22s ease-in-out -6s infinite alternate; }
+.aurora i:nth-child(3) { width: 40vw; height: 40vh; right: -8%; left: auto; bottom: 30%; background: radial-gradient(closest-side, rgba(159,191,59,.16), transparent); animation: glow 26s ease-in-out -3s infinite alternate; }
+.aurora::after { content: ""; position: absolute; inset: 55% 0 0 0; background: repeating-linear-gradient(90deg, transparent 0 44px, rgba(218,160,56,.06) 44px 48px, transparent 48px 92px, rgba(127,147,255,.04) 92px 96px);
+  -webkit-mask-image: linear-gradient(transparent, #000 70%); mask-image: linear-gradient(transparent, #000 70%); }
+@keyframes glow { from { transform: translate3d(-4%, 0, 0) scale(1); opacity: .7; } to { transform: translate3d(4%, -6%, 0) scale(1.1); opacity: 1; } }
+.gk { position: absolute; width: var(--w); aspect-ratio: 1; transform-style: preserve-3d; animation: kdrift var(--dur) ease-in-out var(--del) infinite alternate; will-change: transform; }
+.gk-in { position: absolute; inset: 0; transform-style: preserve-3d; }
+.gk .gl { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.gk.mid { opacity: .75; } .gk.far { opacity: .4; filter: blur(1.2px); }
+@keyframes kdrift { from { transform: translate3d(0,0,0) rotateX(var(--rx0)) rotateY(var(--ry0)) rotateZ(var(--rz0)); } to { transform: translate3d(16px,-28px,40px) rotateX(var(--rx1)) rotateY(var(--ry1)) rotateZ(var(--rz1)); } }
+.mark3d { position: absolute; right: 11%; top: 50%; width: min(300px, 30vw); aspect-ratio: 1; transform: translateY(-50%); transform-style: preserve-3d; }
+.mark-sway { position: absolute; inset: 0; transform-style: preserve-3d; animation: sway 18s ease-in-out infinite alternate; }
+@keyframes sway { from { transform: rotateX(18deg) rotateY(-30deg) rotateZ(-4deg); } to { transform: rotateX(6deg) rotateY(26deg) rotateZ(4deg); } }
+.mark-body { position: absolute; inset: 0; transform-style: preserve-3d; animation: lift 14s cubic-bezier(.65,0,.35,1) infinite; }
+.mark-body .sl { position: absolute; inset: 0; width: 100%; height: 100%; }
+.mark-body .sl:first-child { filter: drop-shadow(0 0 30px rgba(218,160,56,.35)); }
+@keyframes lift { 0%, 100% { transform: translateZ(-60px) scale(.94); } 40%, 70% { transform: translateZ(0) scale(1); } }
+.node { position: absolute; width: 23.5%; aspect-ratio: 1; margin: -11.75% 0 0 -11.75%; border-radius: 50%; transform-style: preserve-3d;
+  background: radial-gradient(circle at 35% 30%, #fffaf0, #f3e7c8 45%, #daa038 100%); box-shadow: 0 0 0 1px rgba(255,255,255,.25), 0 0 34px rgba(218,160,56,.55);
+  animation: assemble 14s cubic-bezier(.65,0,.35,1) var(--nd) infinite; will-change: transform; }
+@keyframes assemble {
+  0%, 100% { transform: translate3d(var(--sx), var(--sy), var(--sz)) rotateZ(var(--sr)) scale(.7); opacity: .55; }
+  40%, 70% { transform: translate3d(0, 0, 6px) rotateZ(0) scale(1); opacity: 1; }
+  52% { box-shadow: 0 0 0 1px rgba(255,255,255,.5), 0 0 60px rgba(218,160,56,.95); } }
+.mark-glow { position: absolute; left: -35%; right: -35%; top: 75%; height: 80%; background: radial-gradient(closest-side, rgba(218,160,56,.7), rgba(95,121,255,.18) 60%, transparent);
+  filter: blur(22px); opacity: .25; animation: anchor 14s ease-in-out infinite; transform: rotateX(80deg); }
+@keyframes anchor { 0%, 30%, 76%, 100% { opacity: .2; } 46%, 62% { opacity: .85; } }
+.scene.paused *, .scene.paused *::after { animation-play-state: paused !important; }
+
+/* ---------- scroll feel: a sky of kites behind the page, a progress line, sections that rise in ---------- */
+body > .sky { position: fixed; inset: 0; z-index: 0; pointer-events: none; perspective: 1000px; overflow: hidden; }
+.sk { position: absolute; width: 0; height: 0; transform-style: preserve-3d; will-change: transform; }
+.sk .gk { left: 0; top: 0; } .sky .gk.far { opacity: .55; filter: blur(.6px); } .sky .gk.mid { opacity: .9; }
+body > .progress { position: fixed; z-index: 40; top: 0; left: 0; right: 0; height: 3px; transform-origin: 0 50%; transform: scaleX(0);
+  background: linear-gradient(90deg, var(--olive-btn), var(--amber) 60%, var(--serv-btn)); box-shadow: 0 0 14px rgba(218,160,56,.6); }
+.rv .block:not(.in) { opacity: 0; transform: translateY(40px); }
+.rv .block { transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
+.rv .block.in .steps > li, .rv .block.in .how > div, .rv .block.in .grid4 .stat, .rv .block.in tbody tr, .rv .block.in .earn > *, .rv .block.in .verdict .box {
+  animation: rise .7s cubic-bezier(.2,.7,.2,1) both; }
+.rv .block.in :is(.steps > li, .how > div, .grid4 .stat, tbody tr, .earn > *, .verdict .box):nth-child(2) { animation-delay: .08s; }
+.rv .block.in :is(.steps > li, .how > div, .grid4 .stat, tbody tr, .earn > *, .verdict .box):nth-child(3) { animation-delay: .16s; }
+.rv .block.in :is(.steps > li, .how > div, .grid4 .stat, tbody tr, .earn > *, .verdict .box):nth-child(4) { animation-delay: .24s; }
+.rv .block.in :is(.steps > li, .how > div, .grid4 .stat, tbody tr, .earn > *, .verdict .box):nth-child(5) { animation-delay: .32s; }
+.rv .block.in :is(.steps > li, .how > div, .grid4 .stat, tbody tr, .earn > *, .verdict .box):nth-child(n+6) { animation-delay: .4s; }
+@keyframes rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+.steps > li, .how > div, .grid4 .stat, .box { transition: transform .25s ease, border-color .25s ease; }
+.steps > li:hover, .how > div:hover, .grid4 .stat:hover { transform: translateY(-3px); border-color: rgba(218,160,56,.45); }
+
 @media (max-width: 860px) {
   .stats { grid-template-columns: 1fr 1fr; } .stat:nth-child(2) { border-right: 0; } .stat:nth-child(-n+2) { border-bottom: 1px solid rgba(254,248,240,.12); }
   .earn, .verdict { grid-template-columns: 1fr; } .grid4 { grid-template-columns: 1fr 1fr; } .how { grid-template-columns: 1fr; }
-  .top nav { display: none; } .kites img { opacity: .28; }
+  .top nav { display: none; } .mob-hide { display: none; } .mark3d { right: 4%; top: 22%; width: 150px; opacity: .55; }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .kites img { animation: none; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; }
+  .scene *, .scene *::after, .sky * { animation: none !important; }
+  .gk { transform: rotateX(var(--rx0)) rotateY(var(--ry0)) rotateZ(var(--rz0)); } .mark-sway { transform: rotateX(12deg) rotateY(-20deg); }
+  .node { transform: translateZ(6px); } .mark-glow { opacity: .7; } }

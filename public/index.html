@@ -12,19 +12,15 @@
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="sky" id="sky" aria-hidden="true"></div>
   <div class="hero-wrap">
     <header class="top">
       <a class="brand" href="/"><span class="mark" aria-hidden="true"></span>Aisle</a>
       <nav aria-label="Sections"><a href="#try">Try it</a><a href="#run">Real run</a><a href="#kite">Paid on Kite</a><a href="#earn">Earnings</a><a href="#honest">Honesty</a><a href="#how">How it works</a><a href="https://github.com/imprint-hash/aisle">Code</a></nav>
       <span class="pill"><i></i>Kite mainnet · SERV</span>
     </header>
-    <div class="kites" aria-hidden="true">
-      <img src="/img/kite.svg" alt="" style="left:58%;top:14%;--s:1.6;--d:19s;--r:-12deg">
-      <img src="/img/kite.svg" alt="" style="left:82%;top:30%;--s:2.4;--d:24s;--r:10deg">
-      <img src="/img/kite.svg" alt="" style="left:70%;top:58%;--s:1.2;--d:17s;--r:-4deg">
-      <img src="/img/kite.svg" alt="" style="left:90%;top:70%;--s:1.4;--d:21s;--r:16deg">
-      <img src="/img/kite.svg" alt="" style="left:50%;top:40%;--s:.9;--d:15s;--r:6deg">
-    </div>
+    <div class="scene" id="scene" aria-hidden="true"></div>
     <section class="hero">
       <p class="kick">OpenServ SERV Hackathon 02 · Kite track</p>
       <h1>Aisle</h1>
@@ -99,6 +95,7 @@
     <span>Aisle · built for the OpenServ SERV Hackathon 02 (Kite track)</span>
     <span><a href="https://github.com/imprint-hash/aisle">Code</a> · <a href="/data/run.json">run.json</a> · <a href="/data/eval.json">eval.json</a> · <a href="/data/kite-views.json">kite-views.json</a></span>
   </footer>
+  <script src="/scene.js" defer></script>
   <script src="/app.js" type="module"></script>
 </body>
 </html>
