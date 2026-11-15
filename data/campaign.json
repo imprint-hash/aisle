@@ -1,0 +1,23 @@
+{
+  "id": "cmp-001",
+  "advertiser": "Demo advertiser run by the Aisle team, promoting vibesprings.net's listed forecast (not affiliated with vibesprings.net)",
+  "sponsored_offer": "vibesprings",
+  "ad_copy": "16-day forecasts for any city worldwide, from national weather services.",
+  "price_per_view_usd": 0.05,
+  "budget_usd": 0.25,
+  "split": { "shopper": 0.60, "aisle": 0.25, "agent_developer": 0.15 },
+  "billable_view_rule": [
+    "the shopper agent is a Kite-registered agent linked to an authorised Kite account",
+    "the agent is running a shopping task its owner asked for",
+    "the sponsored offer was included in the comparison, using structured facts only",
+    "the honesty check passed: the choice was the same with sponsorship hidden and shown",
+    "at most one paid view per agent per task; a campaign never pays past its budget"
+  ],
+  "tasks": [
+    { "id": "t1", "need": "a weather forecast API to plan a weekend trip", "location": "Lagos, Nigeria", "lat": 6.52, "lon": 3.38, "city": "Lagos", "min_days": 7, "priorities": ["lowest price", "hourly detail", "most recently verified working"] },
+    { "id": "t2", "need": "a long-range outlook to plan a two-week safari", "location": "Nairobi, Kenya", "lat": -1.29, "lon": 36.82, "city": "Nairobi", "min_days": 14, "priorities": ["covers at least 14 days", "lowest price"] },
+    { "id": "t3", "need": "the cheapest working forecast for a delivery route", "location": "Chicago, USA", "lat": 41.88, "lon": -87.63, "city": "Chicago", "min_days": 5, "priorities": ["lowest price", "most recently verified working"] },
+    { "id": "t4", "need": "a forecast with air quality for an asthmatic traveller", "location": "London, UK", "lat": 51.51, "lon": -0.13, "city": "London", "min_days": 7, "priorities": ["includes air quality", "lowest price"] },
+    { "id": "t5", "need": "a weekly forecast for a market stall", "location": "Tokyo, Japan", "lat": 35.68, "lon": 139.69, "city": "Tokyo", "min_days": 7, "priorities": ["lowest price", "most recently verified working"] }
+  ]
+}

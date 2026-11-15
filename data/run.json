@@ -1,0 +1,497 @@
+{
+ "campaign": "cmp-001",
+ "views": [
+  {
+   "type": "billable_view",
+   "campaign": "cmp-001",
+   "task": "t1",
+   "location": "Lagos, Nigeria",
+   "need": "a weather forecast API to plan a weekend trip",
+   "agent_id": "agent_01a1decb-b40f-7989-b780-7c7a6eab9c26",
+   "agent_check": "Kite-registered agent under a passkey-backed Kite account",
+   "sponsored_offer": "vibesprings",
+   "blind_choice": "tbs",
+   "shown_choice": "tbs",
+   "influenced": false,
+   "sponsored_won": false,
+   "ranking": [
+    {
+     "id": "tbs",
+     "verdict": "chosen",
+     "reason": "It has worldwide coverage, at least 7 forecast days, hourly detail, and is tied for the lowest price while being verified more recently than the other lowest-priced hourly option."
+    },
+    {
+     "id": "sitecheck",
+     "verdict": "qualified",
+     "reason": "It covers Lagos with 7 forecast days and hourly detail at the lowest price, but was verified less recently than tbs."
+    },
+    {
+     "id": "vibesprings",
+     "verdict": "qualified",
+     "reason": "It covers Lagos with 16 forecast days at a low price, but costs more than the lowest-priced options and lacks hourly detail."
+    },
+    {
+     "id": "hugen",
+     "verdict": "qualified",
+     "reason": "It covers Lagos and provides 7 forecast days, but costs more than the other eligible options and lacks hourly detail."
+    },
+    {
+     "id": "otto",
+     "verdict": "disqualified",
+     "reason": "It offers only 5 forecast days, fewer than the 7 days needed."
+    },
+    {
+     "id": "agent402",
+     "verdict": "disqualified",
+     "reason": "Its US-only coverage does not include Lagos, Nigeria."
+    }
+   ],
+   "serv_features": [
+    "multipath",
+    "serv_shadow_agent"
+   ],
+   "serv_ids": [
+    "chatcmpl-EkSKSbMBPYzecdMEXDWyTfZ3ehpx6",
+    "chatcmpl-EkSKSfc5MWgRCLNtvlmaYVyrEyzlb"
+   ],
+   "winner": "tbs",
+   "price_usd": 0.05,
+   "split_usd": {
+    "shopper": 0.03,
+    "aisle": 0.0125,
+    "agent_developer": 0.0075
+   },
+   "issued_at": "2026-11-15T11:04:59.307Z",
+   "sig": "I8wqoNHUaxpABnXW6nydvxzGr12F0Q+DKMxVeF4CwJbneokGwWsVquB6yfCt7V86tIWrzixOundOEErXa1aABg=="
+  },
+  {
+   "type": "billable_view",
+   "campaign": "cmp-001",
+   "task": "t2",
+   "location": "Nairobi, Kenya",
+   "need": "a long-range outlook to plan a two-week safari",
+   "agent_id": "agent_01a1decb-b40f-7989-b780-7c7a6eab9c26",
+   "agent_check": "Kite-registered agent under a passkey-backed Kite account",
+   "sponsored_offer": "vibesprings",
+   "blind_choice": "vibesprings",
+   "shown_choice": "vibesprings",
+   "influenced": false,
+   "sponsored_won": true,
+   "ranking": [
+    {
+     "id": "vibesprings",
+     "verdict": "chosen",
+     "reason": "It covers Nairobi and provides 16 forecast days, meeting the two-week planning need."
+    },
+    {
+     "id": "tbs",
+     "verdict": "disqualified",
+     "reason": "It covers Nairobi but provides only 7 forecast days, fewer than the 14 needed."
+    },
+    {
+     "id": "hugen",
+     "verdict": "disqualified",
+     "reason": "It covers Nairobi but provides only 7 forecast days, fewer than the 14 needed."
+    },
+    {
+     "id": "otto",
+     "verdict": "disqualified",
+     "reason": "It covers Nairobi but provides only 5 forecast days, fewer than the 14 needed."
+    },
+    {
+     "id": "agent402",
+     "verdict": "disqualified",
+     "reason": "Its coverage is limited to the United States, not Nairobi."
+    },
+    {
+     "id": "sitecheck",
+     "verdict": "disqualified",
+     "reason": "It covers Nairobi but provides only 7 forecast days, fewer than the 14 needed."
+    }
+   ],
+   "serv_features": [
+    "multipath",
+    "serv_shadow_agent"
+   ],
+   "serv_ids": [
+    "chatcmpl-EkSKaw5m7yjfYk4MWf0aYjpkznxe6",
+    "chatcmpl-EkSKaM7wkZcaOdGuu6XdeLtchOQy1"
+   ],
+   "winner": "vibesprings",
+   "price_usd": 0.05,
+   "split_usd": {
+    "shopper": 0.03,
+    "aisle": 0.0125,
+    "agent_developer": 0.0075
+   },
+   "issued_at": "2026-11-15T11:05:09.938Z",
+   "sig": "RwOfuXkGzxqVk5uzeclwjFA7symQZAc2+tgNy55owt4LDY1nU/2CwvcqSBL7rdKwsU0JDTx/kZ83sBr5QXJVAA=="
+  },
+  {
+   "type": "billable_view",
+   "campaign": "cmp-001",
+   "task": "t3",
+   "location": "Chicago, USA",
+   "need": "the cheapest working forecast for a delivery route",
+   "agent_id": "agent_01a1decb-b40f-7989-b780-7c7a6eab9c26",
+   "agent_check": "Kite-registered agent under a passkey-backed Kite account",
+   "sponsored_offer": "vibesprings",
+   "blind_choice": "tbs",
+   "shown_choice": "tbs",
+   "influenced": false,
+   "sponsored_won": false,
+   "ranking": [
+    {
+     "id": "vibesprings",
+     "verdict": "qualified",
+     "reason": "It covers Chicago and offers 16 forecast days, but costs more than the cheapest options."
+    },
+    {
+     "id": "tbs",
+     "verdict": "chosen",
+     "reason": "It covers Chicago, provides at least five forecast days, and ties for the lowest price while having the most recent verification among the cheapest options."
+    },
+    {
+     "id": "hugen",
+     "verdict": "qualified",
+     "reason": "It covers Chicago and offers seven forecast days, but costs more than the cheapest options."
+    },
+    {
+     "id": "otto",
+     "verdict": "qualified",
+     "reason": "It covers Chicago and offers the required five forecast days, but costs more than the cheapest options."
+    },
+    {
+     "id": "agent402",
+     "verdict": "qualified",
+     "reason": "It covers the United States and offers seven forecast days at the lowest price, but was verified less recently than tbs."
+    },
+    {
+     "id": "sitecheck",
+     "verdict": "qualified",
+     "reason": "It covers Chicago and offers seven forecast days at the lowest price, but was verified less recently than tbs."
+    }
+   ],
+   "serv_features": [
+    "multipath",
+    "serv_shadow_agent"
+   ],
+   "serv_ids": [
+    "chatcmpl-EkSKlOrgIkVqe82aOquhVO0lWnoNY",
+    "chatcmpl-EkSKlZe6ZddYgEMyaLadrfKrJJ9aM"
+   ],
+   "winner": "tbs",
+   "price_usd": 0.05,
+   "split_usd": {
+    "shopper": 0.03,
+    "aisle": 0.0125,
+    "agent_developer": 0.0075
+   },
+   "issued_at": "2026-11-15T11:05:24.980Z",
+   "sig": "4nIXEOlDyO7hQQ2W07c9sbpHKWrPw8IaRDfEXb1kdw48FrBIQDDV7c5EsAi/xDiUl2j5gMnf3pC7x+eDeGJmCw=="
+  },
+  {
+   "type": "billable_view",
+   "campaign": "cmp-001",
+   "task": "t4",
+   "location": "London, UK",
+   "need": "a forecast with air quality for an asthmatic traveller",
+   "agent_id": "agent_01a1decb-b40f-7989-b780-7c7a6eab9c26",
+   "agent_check": "Kite-registered agent under a passkey-backed Kite account",
+   "sponsored_offer": "vibesprings",
+   "blind_choice": "tbs",
+   "shown_choice": "tbs",
+   "influenced": false,
+   "sponsored_won": false,
+   "ranking": [
+    {
+     "id": "vibesprings",
+     "verdict": "disqualified",
+     "reason": "It covers London and offers enough forecast days, but it does not include air quality."
+    },
+    {
+     "id": "tbs",
+     "verdict": "chosen",
+     "reason": "It includes air quality, covers London, and provides the required seven forecast days at the lowest price among offers that meet the task."
+    },
+    {
+     "id": "hugen",
+     "verdict": "disqualified",
+     "reason": "It covers London and offers enough forecast days, but it does not include air quality."
+    },
+    {
+     "id": "otto",
+     "verdict": "disqualified",
+     "reason": "It provides only five forecast days and does not include air quality."
+    },
+    {
+     "id": "agent402",
+     "verdict": "disqualified",
+     "reason": "It is limited to the United States, so it does not cover London."
+    },
+    {
+     "id": "sitecheck",
+     "verdict": "disqualified",
+     "reason": "It covers London and offers enough forecast days, but it does not include air quality."
+    }
+   ],
+   "serv_features": [
+    "multipath",
+    "serv_shadow_agent"
+   ],
+   "serv_ids": [
+    "chatcmpl-EkSL0D3OcAdpH5F8uMGoSFeKHJ4Dy",
+    "chatcmpl-EkSL0LXyR2LEMnwVQU8Pwn09BI93h"
+   ],
+   "winner": "tbs",
+   "price_usd": 0.05,
+   "split_usd": {
+    "shopper": 0.03,
+    "aisle": 0.0125,
+    "agent_developer": 0.0075
+   },
+   "issued_at": "2026-11-15T11:05:34.706Z",
+   "sig": "UHZSMK49BEhHL5jGUn4f8jKQ3myhw1JugmKIwfrlj268iN+ti+2sNmjnwJv4UO2IIsYel5ip67n1QAnNinpbBw=="
+  },
+  {
+   "type": "billable_view",
+   "campaign": "cmp-001",
+   "task": "t5",
+   "location": "Tokyo, Japan",
+   "need": "a weekly forecast for a market stall",
+   "agent_id": "agent_01a1decb-b40f-7989-b780-7c7a6eab9c26",
+   "agent_check": "Kite-registered agent under a passkey-backed Kite account",
+   "sponsored_offer": "vibesprings",
+   "blind_choice": "tbs",
+   "shown_choice": "tbs",
+   "influenced": false,
+   "sponsored_won": false,
+   "ranking": [
+    {
+     "id": "tbs",
+     "verdict": "chosen",
+     "reason": "It covers Tokyo, provides 7 forecast days, and is the lowest-priced eligible option; its working status was verified more recently than the other option at the same price."
+    },
+    {
+     "id": "sitecheck",
+     "verdict": "qualified",
+     "reason": "It covers Tokyo and provides 7 forecast days at the lowest price, but it was verified working less recently than tbs."
+    },
+    {
+     "id": "vibesprings",
+     "verdict": "qualified",
+     "reason": "It covers Tokyo and provides more than 7 forecast days, but it costs more than the lowest-priced eligible options."
+    },
+    {
+     "id": "hugen",
+     "verdict": "qualified",
+     "reason": "It covers Tokyo and provides 7 forecast days, but it costs more than the other eligible options."
+    },
+    {
+     "id": "otto",
+     "verdict": "disqualified",
+     "reason": "It provides only 5 forecast days, fewer than the 7 days needed."
+    },
+    {
+     "id": "agent402",
+     "verdict": "disqualified",
+     "reason": "It covers only the United States, not Tokyo."
+    }
+   ],
+   "serv_features": [
+    "multipath",
+    "serv_shadow_agent"
+   ],
+   "serv_ids": [
+    "chatcmpl-EkSLAIRgGqgWpk2M91BiYrPZCnnce",
+    "chatcmpl-EkSLAXTxdNhNlAKBoc1wofvB9jHqw"
+   ],
+   "winner": "tbs",
+   "price_usd": 0.05,
+   "split_usd": {
+    "shopper": 0.03,
+    "aisle": 0.0125,
+    "agent_developer": 0.0075
+   },
+   "issued_at": "2026-11-15T11:05:44.456Z",
+   "sig": "euTQfVK80/nbM1C2GkdbJP/rOq1DY54bdoHX+oU5GRVV9PPtpP3YShmZUXRDgJSOLxPw/GOxQNc5SkMW8/uFBw=="
+  }
+ ],
+ "refusals": [
+  {
+   "type": "refused_unverified_agent",
+   "campaign": "cmp-001",
+   "agent_id": "agent_01ffffff-0000-7000-8000-00000000b07",
+   "reason": "Not a Kite-registered agent: no identity found",
+   "paid_usd": 0,
+   "issued_at": "2026-11-15T11:04:50.924Z",
+   "sig": "WJPEBdGoZQI7zjkoMHrH5csUMQ2JWb4RHpZ7NLRLYY6OU/rngUerO9ymo0jaYgv85ItoHnHH1sPz8nED6BORBg=="
+  }
+ ],
+ "purchases": [
+  {
+   "type": "purchase",
+   "task": "t2",
+   "seller": "vibesprings.net",
+   "url": "https://vibesprings.net/api/forecast?location=Nairobi&days=14",
+   "ok": true,
+   "http": 200,
+   "network": "eip155:8453",
+   "tx": "0xb65336818fb06e419d430682fc7f6baacbd0de0ad1a5c4f18283e170cd9e647d",
+   "amount_usd": 0.002,
+   "session_id": "agent_session_01a1decc-e643-7e13-b057-cac6fc5aac08",
+   "error": null,
+   "issued_at": "2026-11-15T11:09:58.474Z",
+   "sig": "kl5BHIr9VMbSBATrcUtO9VIFEP6u5HUlmpMX9vV6M1FGoPQGAx38m6Zqo8MGgQ7uqezhw15N0LJutOyzWN8tAA=="
+  },
+  {
+   "type": "purchase",
+   "task": "t1",
+   "seller": "api.sitecheck-api.workers.dev",
+   "chosen": false,
+   "url": "https://api.sitecheck-api.workers.dev/api/weather?lat=6.52&lon=3.38",
+   "ok": true,
+   "http": 200,
+   "network": "eip155:8453",
+   "tx": "0x0acb22b33fb75a72e928377f377f07ff3428afc53d20166350237c3714489889",
+   "amount_usd": 0.002,
+   "session_id": "agent_session_01a1decc-e643-7e13-b057-cac6fc5aac08",
+   "attempts": [
+    {
+     "seller": "x402.tbs-digital.com",
+     "ok": false,
+     "error": "destination pay: merchant returned HTTP 402"
+    },
+    {
+     "seller": "api.sitecheck-api.workers.dev",
+     "ok": true,
+     "error": null
+    }
+   ],
+   "issued_at": "2026-11-15T11:11:04.959Z",
+   "sig": "fTC/Kj4zcOf0iSBMyFahgR5PBtPqVfqmsSRKJDyHIfVEY3t/BB01hBhL2PFGsPUMavq+sgZohC0azmwsHnCBCQ=="
+  },
+  {
+   "type": "purchase",
+   "task": "t3",
+   "seller": "vibesprings.net",
+   "chosen": false,
+   "url": "https://vibesprings.net/api/forecast?location=Chicago&days=5",
+   "ok": true,
+   "http": 200,
+   "network": "eip155:8453",
+   "tx": "0x0cb08be050854389878e2775041b990b33c18d8a87ca4504a9bce649172b045a",
+   "amount_usd": 0.002,
+   "session_id": "agent_session_01a1decc-e643-7e13-b057-cac6fc5aac08",
+   "attempts": [
+    {
+     "seller": "x402.tbs-digital.com",
+     "ok": false,
+     "error": "destination pay: merchant returned HTTP 402"
+    },
+    {
+     "seller": "vibesprings.net",
+     "ok": true,
+     "error": null
+    }
+   ],
+   "issued_at": "2026-11-15T11:11:10.177Z",
+   "sig": "qIIIuCslTuSCh28kuuLcBpHK21EtDO6Zs9hb92X4IxsWNNyt49mVlUGqVlCk7B2RO3Ub0/lScZufKjgrSOL7AA=="
+  },
+  {
+   "type": "purchase",
+   "task": "t4",
+   "ok": false,
+   "attempts": [
+    {
+     "seller": "x402.tbs-digital.com",
+     "ok": false,
+     "error": "destination pay: merchant returned HTTP 402"
+    }
+   ],
+   "issued_at": "2026-11-15T11:11:12.785Z",
+   "sig": "oycGEzMbFEtGcCpR05naezUtCKolPzmGl2sSwD4uRBUW4bXbZfUCBlLYqslUQnb49hJDycgCZ5ZzOouwaeVrCw=="
+  },
+  {
+   "type": "purchase",
+   "task": "t5",
+   "seller": "api.sitecheck-api.workers.dev",
+   "chosen": false,
+   "url": "https://api.sitecheck-api.workers.dev/api/weather?lat=35.68&lon=139.69",
+   "ok": true,
+   "http": 200,
+   "network": "eip155:8453",
+   "tx": "0xe58b351b260b8a38f1efd4a71f4e16795c87fc893a021356618c012c79026ce0",
+   "amount_usd": 0.002,
+   "session_id": "agent_session_01a1decc-e643-7e13-b057-cac6fc5aac08",
+   "attempts": [
+    {
+     "seller": "x402.tbs-digital.com",
+     "ok": false,
+     "error": "destination pay: merchant returned HTTP 402"
+    },
+    {
+     "seller": "api.sitecheck-api.workers.dev",
+     "ok": true,
+     "error": null
+    }
+   ],
+   "issued_at": "2026-11-15T11:11:18.558Z",
+   "sig": "FiRGGQZyE3kSJbF31ZIL5PhnyEMiJ8Z5vKh/RXEps1rcpVp66ekMvia7+xFmbENjZBStN3ZdToa8pCQulzJdCQ=="
+  }
+ ],
+ "settlements": [
+  {
+   "type": "settlement",
+   "role": "shopper",
+   "to": "0x4b3441eac9ec7ceab983a271eca2e4c78afccaff",
+   "amount_usd": 0.15,
+   "chain": "base",
+   "views": [
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t5"
+   ],
+   "status": "success",
+   "method": "Kite Passport wallet send (owner passkey, dashboard)",
+   "tx": "0x7778e4274a09f059282da59ad565f27f391519238335fb1d85983a4eb633bcee",
+   "block": 57763950,
+   "from": "0x007c857d9e9ffeb59de125acb73474ea4a893e5a",
+   "issued_at": "2026-11-15T11:56:44.351Z",
+   "sig": "u3M5Xs7SlhrXcxk417sytm/yF40JK5up6jUJmC61C/qaCpRGWtBq8GKweiwySDmrFobj9jLAE9zusJe/XNuFAw=="
+  },
+  {
+   "type": "settlement",
+   "role": "aisle",
+   "to": "0x52A566EeAa8A7CF1957311506dA506b3B5465981",
+   "amount_usd": 0.1,
+   "chain": "base",
+   "views": [
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t5"
+   ],
+   "status": "success",
+   "method": "Kite Passport wallet send (owner passkey, dashboard)",
+   "tx": "0x1c6508702b4e6df6c817a4cdeaaad97d3cd7991f7c43b8d80f3944c83fe57692",
+   "block": 57766447,
+   "from": "0x007c857d9e9ffeb59de125acb73474ea4a893e5a",
+   "note": "includes the agent developer share (15% of views) held for payout",
+   "issued_at": "2026-11-15T11:56:44.360Z",
+   "sig": "+uADChBlRvPiJoLnxWv190RM0uRAzpiXKSbHkihu9AWwU6xKiJ3r2DsCkEZUj5HMyHZsUvgnm8y5u+LcM996CA=="
+  }
+ ],
+ "ad_screen": {
+  "blocked": false,
+  "prompt_guard": false,
+  "label": "ok",
+  "why": "Describes the forecast service and its coverage.",
+  "guard_note": "Get 16-day weather forecasts for cities worldwide, sourced from national weather services."
+ },
+ "public_key": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAy9xoFmWAYO43HnMLexSnHFMEN1O95RO5Q26dwt8/nsI=\n-----END PUBLIC KEY-----\n",
+ "updated_at": "2026-11-15T11:56:44.362Z"
+}
