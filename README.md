@@ -112,6 +112,20 @@ Run them yourself: `node scripts/eval.mjs` (needs a SERV API key and the `kpass`
 - **Wallet transfers:** campaign settlement through Kite wallet send, with **passkey step-up** on every transfer.
 - **Identity onboarding:** the account claimed `ind-imprint` and submitted onboarding, so the shopper agent can be listed in Kite's public directory once onboarding is verified.
 
+## Trust model: what you have to trust, and what you can check yourself
+
+Judges of earlier hackathons asked us to make evidence checkable by anyone and to say plainly who controls what. Here it is for Aisle.
+
+| Claim | Check it yourself | What you still have to trust |
+|---|---|---|
+| The purchases and payouts really happened | Every transaction is linked on a public explorer (Basescan for the Passport purchases and settlements, Kitescan for the per-view payouts) | Nothing: they're on public chains |
+| Nobody edited the records afterwards | Every record is Ed25519-signed. The site's **Verify all receipts in my browser** button checks each signature against Aisle's public key; change one byte and it fails | That Aisle's key is used honestly. A signature proves who wrote a record and that it wasn't changed, not that it's true |
+| Sponsorship didn't buy the choice | Each billable view stores both SERV request IDs (sponsor hidden and shown) and both choices; `node scripts/eval.mjs` re-runs the 30-ranking test | That SERV returned what we logged (the request IDs let OpenServ confirm it) |
+| Only Kite-registered agents earn | Agents are checked with Kite's own `kpass`; the payout service answers 403 to an unregistered agent before Kite's facilitator settles anything (see the fake-agent row above) | That Aisle's signed agent list (`data/agents.json`) mirrors Kite's registry |
+| Who holds the money | Per-view payouts go straight to the shopper's own wallet (`payTo`); Aisle never holds the shopper's share | Aisle's 25% and the developer's 15% sit in a team wallet (a single key) until paid out; the demo advertiser is run by the Aisle team (disclosed above) |
+
+**Scope:** nothing in Aisle is specific to weather. It ranks whatever offers an agent compares; the demo uses weather APIs only because they are real, paid sellers in Kite's catalogue, so the purchases could be real.
+
 ## Honest limits (what we found while building)
 
 - **Kite Passport only pays hosts in Kite's executable catalogue.** Passport refused our own payout endpoint (`host_not_in_executable_catalog`). So the mainnet run settles **in one passkey-approved Kite wallet transfer per campaign**. Per-view settlement is shown on **Kite testnet** through `kite-x402-hono` (above), paid by a brand agent with its own key. Once Aisle is listed in Kite's catalogue, a brand's Passport session can pay each view live on mainnet.
